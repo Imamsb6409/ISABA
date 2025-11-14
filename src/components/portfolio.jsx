@@ -43,7 +43,7 @@ export default function Portfolio() {
           className={`h-[2px] -mt-3 w-1/2 border-0 bg-gradient-to-r from-primary bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x to-secondary rounded-full`}
         />
 
-        <p
+        <div
           ref={PortfolioRef}
           className="text-[14px] sm:text-[16px] lg:text-[24px] xl:text-[24px] "
         >
@@ -64,7 +64,7 @@ export default function Portfolio() {
               }}
             />
           )}
-        </p>
+        </div>
       </div>
       {/* cardPortfolio */}
       <CardPortfolio />

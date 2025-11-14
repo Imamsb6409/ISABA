@@ -1,6 +1,6 @@
 import ImgImam from "../assets/imam.png";
 import ImgTail from "../assets/skills/Tailwind.svg";
-import ImgReact from "../assets/skills/React.svg";
+import ImgReact from "../assets/skills/react.svg";
 import Imgjavascript from "../assets/skills/js1.svg";
 import Imghtml from "../assets/skills/HTML.svg";
 import ImgCss from "../assets/skills/CSS.svg";

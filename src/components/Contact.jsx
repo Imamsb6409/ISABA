@@ -41,7 +41,7 @@ export default function Contact() {
           Lets's Connect
         </h1>
         <hr class="h-[2px] w-1/2  border-0 bg-gradient-to-r from-primary bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x to-secondary rounded-full" />
-        <p  className="text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[28px] lg:m-3">
+        <div  className="text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[28px] lg:m-3">
           {startTyping && (
             <Typewriter
               onInit={(typewriter) => {
@@ -59,7 +59,7 @@ export default function Contact() {
               }}
             />
           )}
-        </p>
+        </div>
       </div>
       {/* form */}
       <div className="flex flex-col items-center gap-y-6 lg:justify-between md:min-w-max lg:w-1/2 lg:flex-col lg:gap-x-6 lg:items-start md:rounded-[50px] lg:rounded-none rounded-[100px] bg-bgDivider lg:pb-0 pb-9">
