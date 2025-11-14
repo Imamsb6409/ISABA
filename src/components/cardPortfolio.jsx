@@ -3,7 +3,7 @@ import IS from "../assets/portfolio-icons/isandtier.svg";
 import ITS from "../assets/portfolio-icons/itsmamsb.svg";
 import TAPAS from "../assets/portfolio-icons/tapas.svg";
 import YD from "../assets/portfolio-icons/yourlidz.svg";
-import YL from "../assets/portfolio-icons/yourlink.svg";
+import YL from "../assets/portfolio-icons/yourLink.svg";
 import Button from "./button";
 
 export default function CardPortfolio() {
