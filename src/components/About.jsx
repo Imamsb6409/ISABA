@@ -4,8 +4,8 @@ import ImgReact from "../assets/skills/react.svg";
 import Imgjavascript from "../assets/skills/js1.svg";
 import Imghtml from "../assets/skills/HTML.svg";
 import ImgCss from "../assets/skills/CSS.svg";
-import Imgfigma from "../assets/skills/Figma.svg";
-import { useEffect, useRef } from "react";
+import Imgfigma from "../assets/skills/FIGMA.svg";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 
