@@ -1,88 +1,83 @@
-
+import ContactForm from "./ContactForm";
+import Typewriter from "typewriter-effect";
+import React, { useRef, useEffect, useState } from "react";
 
 export default function Contact() {
+  const sectionRef = useRef(null);
+  const [startTyping, setStartTyping] = useState(false);
+
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setStartTyping(true);
+        if (sectionRef.current) observer.unobserve(sectionRef.current);
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  if (sectionRef.current) {
+    observer.observe(sectionRef.current);
+  }
+
+  return () => {
+    if (sectionRef.current) observer.unobserve(sectionRef.current);
+  };
+}, []);
+
   return (
     <div
+      ref={sectionRef}
       id="contact"
       className="min-h-screen w-screen lg:w-[90%] pt-14 pb-5 flex flex-col items-center justify-center gap-y-5 bg-[#F1F5F9] px-5 md:px-0 "
     >
-      <div className="text-center w-max px-1">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        className="text-center w-full flex flex-col items-center px-1"
+      >
         <h1 className="text-[36px] lg:text-[48px] xl:text-[62px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x from-primary to-secondary">
-          Let’s Build Something
+          Lets's Connect
         </h1>
-        <h2 className="text-[24px] lg:text-[32px] xl:text-[41px] -mt-3">
-          Meaningful Together
-        </h2>
-        <hr class="h-[2px]  border-0 bg-gradient-to-r from-primary bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x to-secondary rounded-full" />
+        <hr class="h-[2px] w-1/2  border-0 bg-gradient-to-r from-primary bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x to-secondary rounded-full" />
+        <p  className="text-[16px] sm:text-[18px] lg:text-[24px] xl:text-[28px] lg:m-3">
+          {startTyping && (
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(
+                    "Interested in working together or just chatting about creative ideas? Drop me a message!"
+                  )
+                  .start();
+              }}
+              options={{
+                autoStart: true,
+                loop: false,
+                delay: 30,
+                cursor: "",
+              }}
+            />
+          )}
+        </p>
       </div>
       {/* form */}
-      <div className="flex flex-col items-center gap-y-6 lg:justify-between md:min-w-[95%] lg:w-[100%] lg:flex-row lg:gap-x-6 lg:items-start lg:pl-4 lg:rounded-xl lg:bg-bgDivider">
-        <form
-          action=""
-          className="w-full max-w-lg lg:max-w-none bg-white p-8 rounded-lg shadow-lg lg:order-3"
-        >
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm lg:text-lg font-bold mb-2"
-              htmlFor="name"
-            >
-              Name
-            </label>
-            <input
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-              type="text"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm lg:text-lg  font-bold mb-2"
-              htmlFor="email"
-            >
-              Email
-            </label>
-            <input
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              className="block text-gray-700 text-sm lg:text-lg font-bold mb-2"
-              htmlFor="message"
-            >
-              Message
-            </label>
-            <textarea
-              className="w-full px-3 py-2 border border-gray-300 rounded-md"
-              id="message"
-              name="message"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          <button
-            className="px-4 py-2 bg-primary text-white lg:text-lg  rounded-md hover:bg-secondary"
-            type="submit"
-          >
-            Send
-          </button>
-        </form>
-        <div className="flex flex-col items-center mt-4 lg:mt-6 lg:ml-2">
+      <div className="flex flex-col items-center gap-y-6 lg:justify-between md:min-w-max lg:w-1/2 lg:flex-col lg:gap-x-6 lg:items-start md:rounded-[50px] lg:rounded-none rounded-[100px] bg-bgDivider lg:pb-0 pb-9">
+        <ContactForm />
+        <div className="flex lg:hidden flex-col items-center w-full my-4 lg:my-6 lg:-mt-2 order-2">
           <div className="text-center">
-            <h2 className="text-[24px] lg:text-[32px] xl:text-[41px] text-center font-semibold">
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="text-[24px] lg:text-[32px] xl:text-[41px] text-center font-semibold"
+            >
               Or you can contact me via
             </h2>
             <p className="text-[20px] lg:text-[24px] xl:text-[26px] mt-2">
               Email:
               <a
                 href="mailto:imam0406@student.abudzar.sch.id"
-                className="text-primary hover:text-secondary"
+                className="text-primary hover:text-gray-800"
               >
                 {" "}
                 imam0406@student.abudzar.sch.id
@@ -92,6 +87,8 @@ export default function Contact() {
           <div className="flex mt-7 gap-x-3 lg:mt-7 lg:gap-x-5">
             {/* instagram */}
             <a
+              data-aos="zoom-in-up"
+              data-aos-duration="1500"
               href="https://www.instagram.com/imamsb_/"
               target="_blank"
               rel="noopener noreferrer"
@@ -116,6 +113,8 @@ export default function Contact() {
             </a>
             {/* linkedin */}
             <a
+              data-aos="zoom-in-up"
+              data-aos-duration="2000"
               href="https://www.linkedin.com/in/imamsb/"
               target="_blank"
               rel="noopener noreferrer"
@@ -143,6 +142,8 @@ export default function Contact() {
             </a>
             {/* github */}
             <a
+              data-aos="zoom-in-up"
+              data-aos-duration="2500"
               href="https://github.com/Imamsb"
               target="_blank"
               rel="noopener noreferrer"
@@ -165,7 +166,7 @@ export default function Contact() {
               </svg>
             </a>
             {/* whatsapp */}
-            <a href="">
+            <a data-aos="zoom-in-up" data-aos-duration="3000" href="">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -186,7 +187,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-   
     </div>
   );
 }

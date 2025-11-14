@@ -1,19 +1,27 @@
 import Navbar from "../components/Navbar";
 import Logo from "../components/logo";
+import React, { useState, useEffect } from 'react';
+
 
 export default function Header() {
-const header = document.getElementById("header");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("bg-opacity-50");
-    } else {
-      header.classList.remove("bg-opacity-50");
-    }
-  });
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 100); // ubah threshold sesuai kebutuhan
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   return (
-    <div id="header" className=" shadow-md  flex justify-between items-center p-4 px-8  bg-[#F1F5F9] fixed z-10 top-0 w-full">
+    <div id="header" className={`transition-opacity duration-100 ${isScrolled ? 'bg-opacity-50' : 'bg-opacity-100'} shadow-md  flex justify-between items-center p-4 px-8  bg-[#F1F5F9] fixed z-10 top-0 w-full`}>
       <Logo />
       <Navbar />
     </div>

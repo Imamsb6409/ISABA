@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth; /* fallback jika class Tailwind tidak terpasang */
+  scroll-behavior: smooth;
 }
-
 .progress {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
@@ -28,7 +27,10 @@ html {
 }
 
 @keyframes load {
-  0% { width: 0; }
-  100% { width: 68%; }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 68%;
+  }
 }
-

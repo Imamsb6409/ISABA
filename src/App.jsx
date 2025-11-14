@@ -11,6 +11,8 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  return <div className="">{showSplash ? <SplashScreen /> : <MainContent />}</div>;
+  return (
+    <div className="">{showSplash ? <SplashScreen /> : <MainContent />}</div>
+  );
 }
 export default App;

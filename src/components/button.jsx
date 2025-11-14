@@ -1,8 +1,8 @@
-const Button = ({ title, href, target }) => {
+const Button = ({ title, href, target, className }) => {
   return (
     <>
       <a
-        className="cursor-pointer px-8 py-3 bg shadow-sm bg-bgButton hover:bg-gray-800 text-white rounded-2xl"
+        className={`cursor-pointer px-8 py-3 bg shadow-sm bg-bgButton hover:bg-gray-800 text-white rounded-2xl ${className}`}
         href={href}
         target={target}
       >
