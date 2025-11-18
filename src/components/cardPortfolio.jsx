@@ -12,7 +12,7 @@ export default function CardPortfolio() {
       name: "YourLink",
       description:
         "Yourlink is a simple site to save and share favorite links. Built with React and Tailwind, it features a clean and responsive design. Add your favorite links and view your saved list.",
-      tools: ["figma", "HTML", "tailwind","JS"],
+      tools: ["Figma", "HTML", "Tailwind","JS"],
       linkImage: YL,
       btnHref: "https://yourlink.vercel.app/",
     },
@@ -20,7 +20,7 @@ export default function CardPortfolio() {
       name: "ISandTier",
       description:
         "Isandtier is a website built from slicing a Figma design. Created to practice frontend skills and translate UI concepts into real code.",
-      tools: ["figma", "HTML", "tailwind"],
+      tools: ["Figma", "HTML", "Tailwind"],
       linkImage: IS,
       btnHref: "https://first-tailwind-project-psi.vercel.app/",
     },
@@ -28,7 +28,7 @@ export default function CardPortfolio() {
       name: "TAPAS",
       description:
         "Tapas is a green transport campaign website. It offers access to rentable e-bikes to reduce pollution and traffic in Indonesian cities",
-      tools: ["figma", "HTML", "tailwind", "JS"],
+      tools: ["Figma", "HTML", "Tailwind", "JS"],
       linkImage: TAPAS,
       btnHref: "https://tapasride.vercel.app/",
     },
@@ -36,7 +36,7 @@ export default function CardPortfolio() {
       name: "YourLidz",
       description:
         "Yourlidz is a simple site for jotting down ideas, tasks, or daily notes. Designed with a minimalist layout and easy input focus.",
-      tools: ["figma", "JS", "tailwind"],
+      tools: ["Figma", "JS", "Tailwind"],
       linkImage: YD,
       btnHref: "https://yourlidz.vercel.app/",
     },
@@ -52,7 +52,7 @@ export default function CardPortfolio() {
       name: "ICounter",
       description:
         "iCounter is a simple exam project—a counter app built to test basic React skills and user interaction.",
-      tools: ["HTML", "tailwind"],
+      tools: ["HTML", "Tailwind"],
       linkImage: IC,
       btnHref: "https://icounter.vercel.app/",
     },

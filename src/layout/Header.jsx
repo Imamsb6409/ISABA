@@ -21,7 +21,7 @@ export default function Header() {
 
 
   return (
-    <div id="header" className={`transition-opacity duration-100 ${isScrolled ? 'bg-opacity-50' : 'bg-opacity-100'} shadow-md  flex justify-between items-center p-4 px-8  bg-[#F1F5F9] fixed z-10 top-0 w-full`}>
+    <div id="header" className={`transition-opacity duration-100 ${isScrolled ? 'bg-opacity-50' : 'bg-opacity-100'} shadow-md  flex justify-between items-center p-4 px-8  bg-[#F1F5F9] fixed z-50 top-0 w-full`}>
       <Logo />
       <Navbar />
     </div>
