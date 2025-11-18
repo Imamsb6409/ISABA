@@ -93,7 +93,7 @@ const MainContent = () => {
         ref={sectionRef}
         data-aos="fade-down"
         data-aos-duration="1000"
-        className="text-center w-full flex flex-col items-center px-1 mb-6"
+        className="text-center w-full flex flex-col items-center px-1 mt-[100px] mb-6"
       >
         <h1 className="text-[36px] lg:text-[48px] xl:text-[62px] font-extrabold bg-clip-text text-transparent bg-gradient-to-r bg-[length:200%_200%] bg-[position:0%_50%] animate-gradient-x from-primary to-secondary">
           Project Highlights

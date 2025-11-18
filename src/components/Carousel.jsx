@@ -43,7 +43,7 @@ function Carousel({ images, interval = 4000 }) {
 
   return (
     <div
-      className="relative w-full max-w-md md:max-w-6xl mx-auto overflow-hidden group"
+      className="relative w-full max-w-md md:max-w-6xl mx-auto overflow-hidden group mb-9"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
